@@ -16,12 +16,16 @@ To create the image `loumaris/saiku`, execute the following command on the louma
 
         docker build -t loumaris/saiku
 
-To run the image and bind to port 3306:
+or just pull it from the dockerhub (recommended):
 
-        docker run -d -p 8080:8080 loumaris/saiku
+        docker pull loumaris/saiku
+
+To run the image and bind to port 8080 (default):
+
+        docker run -d -p 8080:8080 --name saiku loumaris/saiku
 
 The first time that you run your container, a new user `admin` with all privileges 
-will be created in saku with the password admin. 
+will be created in saku with the password `admin`. 
 
 To add your licence go to http://your-host:8080/upload.html and drop your licence file.
 
